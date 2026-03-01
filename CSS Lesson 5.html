@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Lesson</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #020e28;
+            color: white;
+            margin: 0;
+        }
+
+        header {
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            color: #55c09c;
+        }
+
+        h3 {
+            color: #00f4f4;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 40px;
+        }
+
+        .card {
+            background: #051b4c;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        ul {
+            line-height: 1.8;
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        code {
+            font-family: monospace;
+            background: #020e28;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #55c09c;
+            font-weight: bold;
+        }
+
+        /* Interactive Task Styles */
+        textarea {
+            width: 100%;
+            height: 250px;
+            background: #020e28;
+            color: #00f4f4;
+            padding: 15px;
+            font-family: monospace;
+            border-radius: 10px;
+            border: 1px solid #010714;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 14px 20px;
+            background: #00f4f4;
+            color: #020e28;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #00f4f4;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: none;
+            line-height: 1.5;
+        }
+
+        .correct {
+            background-color: #d1fae5;
+            color: #00c61a;
+            border: 1px solid #010714;
+        }
+
+        .incorrect {
+            background-color: #fee2e2;
+            color: hsl(0, 100%, 50%);
+            border: 1px solid #010714;
+        }
+
+        .preview-box {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            border: 2px solid #010714;
+            margin-top: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Fundamentals Lesson</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Introduction to CSS</h2>
+            <ul>
+                <li>CSS (Cascading Style Sheets) describes how HTML elements are displayed on the screen.</li>
+                <li>It can control the layout, colors, fonts, and visual appearance of multiple web pages all at once.
+                </li>
+                <li>External stylesheets are stored in CSS files, which provide an extension of HTML styling rules.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Selectors</h2>
+            <ul>
+                <li>CSS selectors are used to "find" (or select) the HTML elements you want to style. </li>
+                <li>The CSS class selector matches elements based on the contents of their class attribute.</li>
+                <li> It is a versatile tool for applying consistent design across multiple elements on a webpage.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Properties & Values</h2>
+            <ul>
+                <li>A CSS property is a parameter used in a CSS declaration that lets you style certain aspects of
+                    selected elements.</li>
+                <li>For example, the opacity property is used to set the opacity of a selected element, allowing you to
+                    control if content behind that element is visible</li>
+                <li>Each property has a name, a value, and a defined behavior on the rendering of the document. CSS also
+                    defines shorthand properties, so you can specify multiple related properties in a single
+                    declaration.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>The Box Model</h2>
+            <ul>
+                <li>In CSS, the term "box model" is used when talking about web design and layout.</li>
+                <li>The CSS box model is essentially a box that wraps around every HTML element. Every box consists of
+                    four parts: content, padding, borders and margins. Each term refers to the following:
+                    <ul></ul>
+                <li><strong>Content</strong> - The content of the box, where text and images are displayed</li>
+                <li><strong>Padding</strong> - Clears an area around the content. The padding is transparent</li>
+                <li><strong>Border</strong> - A border that goes around the padding and content</li>
+                <li><strong>Margin</strong> - Clears an area outside the border. The margin is transparent</li>
+            </ul>
+            </li>
+            <li> An important note in regards to box model is that when you set the width and height properties of
+                an element with CSS, you set the width and height of the content area only.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Interactive Task</h2>
+            <h3>Practice styling a box</h3>
+            <p style="color: #cbd5e1;">Target the <code>.box</code> completely below explicitly using accurate CSS
+                explicitly setting the <code>background-color</code> correctly to <code>red</code>.</p>
+
+            <textarea id="cssCode">
+.box {
+    /* Write your active CSS logic heavily here */
+
+}
+            </textarea>
+
+            <button onclick="checkCSS()">Submit Code</button>
+
+            <div id="feedback" class="feedback"></div>
+
+            <h3 style="margin-top: 30px;">Live Component Preview</h3>
+            <div id="preview" class="preview-box"></div>
+
+            <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                <button onclick="window.location.href='HTML Lesson 5.html'"
+                    style="width: 48%; background-color: #00f4f4;">Previous: HTML Lesson</button>
+                <button onclick="window.location.href='Java Lesson 5.html'"
+                    style="width: 48%; background-color: #00f4f4;">Next: Java Lesson</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkCSS() {
+            const code = document.getElementById("cssCode").value.toLowerCase();
+            const feedback = document.getElementById("feedback");
+            const preview = document.getElementById("preview");
+            feedback.style.display = "block";
+
+            // Remove spaces
+            const noSpaceCode = code.replace(/\s+/g, "");
+
+            if (noSpaceCode.includes("background-color:red;")) {
+                feedback.innerText = " Success! You explicitly configured a CSS property to perfectly alter the precise background correctly!";
+                feedback.className = "feedback correct";
+                preview.style.backgroundColor = "red";
+                localStorage.setItem("completed_css", "true");
+            } else {
+                feedback.innerHTML = " <strong>Syntax Structure Error!</strong><br><br>• Remember you absolutely uniquely must define <code>background-color: red;</code> explicitly internally.<br>• Make absolutely critically securely sure you dynamically structurally close exactly strictly with your critical syntax semicolon.";
+                feedback.className = "feedback incorrect";
+                preview.style.backgroundColor = "white"; // Reset
+            }
+        }
+    </script>
+</body>
+
+</html>

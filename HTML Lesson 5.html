@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Lesson</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #020e28;
+            color: white;
+            margin: 0;
+        }
+
+        header {
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            color: #55c09c;
+        }
+
+        h3 {
+            color: #00f4f4;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 40px;
+        }
+
+        .card {
+            background: #051b4c;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        ul {
+            line-height: 1.8;
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        code {
+            font-family: monospace;
+            background: #020e28;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #55c09c;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 250px;
+            background: #020e28;
+            color: #00f4f4;
+            padding: 15px;
+            font-family: monospace;
+            border-radius: 10px;
+            border: 1px solid #010714;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 14px 20px;
+            background: #00f4f4;
+            color: #020e28;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        button:hover {
+            background-color: #00f4f4;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: none;
+            line-height: 1.5;
+        }
+
+        .correct {
+            background-color: #d1fae5;
+            color: #00c61a;
+            border: 1px solid #010714;
+        }
+
+        .incorrect {
+            background-color: #fee2e2;
+            color: hsl(0, 100%, 50%);
+            border: 1px solid #010714;
+        }
+
+        iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            background: white;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML Fundamentals Lesson</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Introduction to HTML</h2>
+            <ul>
+                <li>HTML stands for HyperText Markup Language, used as the standard markup language for creating Web
+                    pages. </li>
+                <li>It describes the logical layout and structure of a Web page using a series of elements (tags);
+                    instructs the browser on how to display content.
+                </li>
+                <li>HTML code components completely form the core foundational building blocks of all modern websites,
+                    allowing browsers to display text and images.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Basic Structure</h2>
+            <ul>
+                <li>Every single HTML document must strictly start with a precise document type declaration:
+                    <code>&lt;!DOCTYPE html&gt;</code>; defined by a start tag, element
+                    content, and an end tag.
+                </li>
+                <li>The base of the document begins identically with <code>&lt;html&gt;</code> and formally
+                    terminates with <code>&lt;/html&gt;</code>, serving as the required root element.</li>
+                <li>The directly visible content logic of the document is safely positioned directly between the
+                    <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code> functional tags.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Common Elements</h2>
+            <ul>
+                <li>Major headings are defined strictly with the <code>&lt;h1&gt;</code> to
+                    <code>&lt;h6&gt;</code> tags, representing levels of importance.
+                </li>
+                <li>Standard text paragraphs are constructed dynamically using the <code>&lt;p&gt;</code> tag and are
+                    usually used to structure typical text blocks securely.</li>
+                <li>The document's body content is represented by the <code>&lt;body&gt;</code> tag.
+                </li>
+                <li>Images can be embedded using the self-closing <code>&lt;img&gt;</code> tag without any strict
+                    closing tag being needed.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Attributes and Links</h2>
+            <ul>
+                <li>Functional attributes provide necessary additional information about HTML
+                    elements.</li>
+                <li>The attributes are always identified and specified within the start tag.
+                </li>
+                <li> For example, the absolute <code>href</code> routing attribute is used to specify the URL of the
+                    page the link goes to.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Forms and Input</h2>
+            <ul>
+                <li>An HTML form is used to collect user input that is often sent to a server for processing.</li>
+                <li>A standard <code>&lt;button type="submit"&gt;</code> component is necessary to submit the form.</li>
+                <li>Another example is the <code>&lt;input&gt;</code> element which is versatile, changing its
+                    interactive interface behavior based on the associated <code>type</code> attribute
+                    (text/password).</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Interactive Task</h2>
+            <h3>Practice adding a heading</h3>
+            <p style="color: #cbd5e1;">Add a heading using exactly &lt;h1&gt; tags inside the body section below.</p>
+
+            <textarea id="htmlCode">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <!-- Add your heading here -->
+
+</body>
+</html>
+            </textarea>
+
+            <button onclick="checkHTML()">Submit Code</button>
+
+            <div id="feedback" class="feedback"></div>
+
+            <h3 style="margin-top: 30px;">Live Preview</h3>
+            <iframe id="preview"></iframe>
+
+            <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                <button onclick="window.location.href='Dashboard 5.html'"
+                    style="width: 48%; background-color: #00f4f4;">Back to Dashboard</button>
+                <button onclick="window.location.href='CSS Lesson 5.html'"
+                    style="width: 48%; background-color: #00f4f4;">Next: CSS Lesson</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const textarea = document.getElementById("htmlCode");
+        const preview = document.getElementById("preview");
+
+        function updatePreview() {
+            preview.srcdoc = textarea.value;
+        }
+
+        textarea.addEventListener("input", updatePreview);
+
+        function checkHTML() {
+            const code = textarea.value;
+            const feedback = document.getElementById("feedback");
+            feedback.style.display = "block";
+
+            if (code.includes("<h1>") && code.includes("</h1>")) {
+                feedback.innerText = " Success! You added a solid <h1> heading to the document successfully.";
+                feedback.className = "feedback correct";
+                localStorage.setItem("completed_html", "true");
+            } else {
+                feedback.innerHTML = " <strong>Error: Invalid HTML Structure!</strong><br><br>• You must explicitly write a <code>&lt;h1&gt;</code> starting tag.<br>• You must wrap your text.<br>• You must explicitly close it with an <code>&lt;/h1&gt;</code> tag.";
+                feedback.className = "feedback incorrect";
+            }
+        }
+
+        updatePreview();
+    </script>
+
+</body>
+
+</html>

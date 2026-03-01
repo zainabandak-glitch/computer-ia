@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Java Lesson</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #020e28;
+            color: white;
+            margin: 0;
+        }
+
+        header {
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            color: #55c09c;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #00f4f4;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px 40px;
+        }
+
+        .card {
+            background: #051b4c;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        ul {
+            line-height: 1.8;
+            color: #cbd5e1;
+            font-size: 16px;
+        }
+
+        pre,
+        textarea {
+            width: 100%;
+            height: 250px;
+            background: #020e28;
+            color: #00f4f4;
+            padding: 15px;
+            font-family: monospace;
+            border-radius: 10px;
+            border: 1px solid #010714;
+            box-sizing: border-box;
+        }
+
+        pre {
+            height: auto;
+        }
+
+        code {
+            font-family: monospace;
+            background: #020e28;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #55c09c;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 14px 20px;
+            background: #00f4f4;
+            color: #020e28;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #00f4f4;
+        }
+
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: none;
+            line-height: 1.5;
+        }
+
+        .correct {
+            background-color: #d1fae5;
+            color: #00c61a;
+            border: 1px solid #010714;
+        }
+
+        .incorrect {
+            background-color: #fee2e2;
+            color: hsl(0, 100%, 50%);
+            border: 1px solid #010714;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Java Fundamentals Lesson</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>Introduction to Java</h2>
+            <ul>
+                <li>Java is a high-level, object-oriented programming language developed by Sun Microsystems in 1995. It
+                    is mostly used for building desktop applications, web applications, Android apps, and enterprise
+                    systems.</li>
+                <li>The main features of Java include:
+                    <ul>
+                        <li><strong>Object-Oriented Programming:</strong> Java supports Object-Oriented Programming
+                            concepts to create modular and reusable code.</li>
+                        <li><strong>Platform Independence:</strong> Java programs can run on any operating system with a
+                            Java Virtual Machine.</li>
+                        <li><strong>Security:</strong> Java ensures reliability and security through strong memory
+                            management and exception handling.</li>
+                        <li><strong>Multithreading and Concurrency:</strong> Java allows concurrent execution of
+                            multiple tasks for efficiency.</li>
+                        <li><strong>API and Standard Libraries:</strong> Java provides extensive built-in libraries for
+                            various programming needs.</li>
+                        <li><strong>Frameworks for Enterprise and Web Development:</strong> Java supports frameworks
+                            that simplify enterprise and web application development.</li>
+                        <li><strong>Open-Source Libraries:</strong> Java has a wide range of libraries to extend
+                            functionality and speed up development.</li>
+                        <li><strong>Maintainability and Scalability:</strong> Java's structured design allows easy
+                            maintenance and growth of applications.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Basic Syntax</h2>
+            <ul>
+                <li>In Java Programming, the following syntax are important:
+                    <ul>
+                        <li><strong>Case Sensitivity:</strong> Java is case sensitive, which means the identifiers Hello
+                            and
+                            hello would have different meanings in Java.</li>
+                        <li><strong>Class Names:</strong> For all class names, the first letter should be in upper case.
+                            If several words are used to form a name of the class, each inner word's first letter should
+                            be in upper case.</li>
+                        <li><strong>Method Names:</strong> All method names should start with a lower case letter. If
+                            several words are used to form the name of the method, then each inner word's first letter
+                            should be in upper case.</li>
+                        <li><strong>Program File Name:</strong> The name of the program file should exactly match the
+                            class
+                            name. When saving the file, you should save it using the class name and append '.java' to
+                            the end of the name - if the file name and the class name do
+                            not match, your program will not compile. Also, in case you do not have a public class
+                            present in the file, then the file name can be different than the class name.
+                            For example, assume 'MyFirstJavaProgram' is the class name. Then the file should be saved as
+                            'MyFirstJavaProgram.java'</li>
+                        <li><strong>public static void main(String args[]):</strong> Java program processing starts from
+                            the main() method, which is a mandatory part of every Java program.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Data and Variables</h2>
+            <ul>
+                <li>Variables are containers for storing data values, and there are different types of variables, for
+                    example:
+                    <ul>
+                        <li><code>String</code> - stores text, such as "Hello". String values are surrounded by double
+                            quotes</li>
+                        <li><code>int</code> - stores integers (whole numbers), without decimals, such as 123 or -123
+                        </li>
+                        <li><code>float</code> - stores floating point numbers, with decimals, such as 19.99 or -19.99
+                        </li>
+                        <li><code>char</code> - stores single characters, such as 'a' or 'B'. Char values are surrounded
+                            by single quotes</li>
+                    </ul>
+                </li>
+                <li>Variables hold data permanently in memory, and are formally bounded by primitive data types like
+                    <code>int</code> for integers and <code>boolean</code> for true/false.
+                </li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Control Flow</h2>
+            <ul>
+                <li>Control flow logic conditionally dictates and determines the dynamic order in which statements are
+                    evaluated and executed in a program.</li>
+                <li>Conditional decision-making statements like <code>if-then</code> and <code>switch</code> logically
+                    execute entirely different code paths based on values.</li>
+                <li>Iterative looping algorithms like <code>for</code> and <code>while</code> repeatedly construct block
+                    executions sequentially until an exit condition triggers.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Interactive Task</h2>
+            <h3>Practice Java Output</h3>
+            <p style="color: #cbd5e1;">Write a command down below to output <strong>"Learning Java!"</strong> to the
+                console.</p>
+
+            <textarea id="javaCode">
+public class Practice {
+    public static void main(String[] args) {
+        // Write your code here
+        
+    }
+}
+            </textarea>
+
+            <button onclick="checkJava()">Submit Code</button>
+
+            <div id="feedback" class="feedback"></div>
+
+            <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                <button onclick="window.location.href='CSS Lesson 5.html'"
+                    style="width: 48%; background-color: #00f4f4;">Previous: CSS Lesson</button>
+                <button onclick="window.location.href='Extra Resources 5.html'"
+                    style="width: 48%; background-color: #00f4f4;">Next: Extra Resources</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function checkJava() {
+            const code = document.getElementById("javaCode").value;
+            const feedback = document.getElementById("feedback");
+            feedback.style.display = "block";
+
+            // Removing spaces for easier logic checking
+            const noSpaceCode = code.replace(/\s+/g, "");
+
+            if (noSpaceCode.includes('System.out.println("LearningJava!");')) {
+                feedback.innerText = " Correct! You successfully printed to the console using Java syntax.";
+                feedback.className = "feedback correct";
+                localStorage.setItem("completed_java", "true");
+            } else {
+                feedback.innerHTML = " <strong>Error: Incorrect code!</strong> You must explicitly use <code>System.out.println(\"Learning Java!\");</code> to print the text to the console.";
+                feedback.className = "feedback incorrect";
+            }
+        }
+    </script>
+</body>
+
+</html>

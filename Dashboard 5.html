@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Lessons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #020e28;
+            color: white;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #55c09c;
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .greeting {
+            color: #00f4f4;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .lesson-card {
+            background: #051b4c;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .lesson-info h2 {
+            margin: 0 0 10px 0;
+            color: white;
+            font-size: 24px;
+        }
+
+        .lesson-info p {
+            margin: 0;
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+
+        .status {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .completed {
+            color: #55c09c;
+        }
+
+        .pending {
+            color: #ffc234;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #16a34a;
+            color: #020e28;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #16a34a;
+        }
+
+        .logout-btn {
+            background-color: transparent;
+            border: 2px solid #ef4444;
+            color: #ef4444;
+            margin-top: 30px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logout-btn:hover {
+            background-color: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Learning Dashboard</h1>
+        <div class="greeting" id="greeting">Welcome back!</div>
+
+        <div class="lesson-card">
+            <div class="lesson-info">
+                <h2>HTML Fundamentals</h2>
+                <span class="status pending" id="status-html">Status: Not Started</span>
+                <p>Learn the structure of web pages.</p>
+            </div>
+            <button onclick="window.location.href='HTML Lesson 5.html'">Start Lesson</button>
+        </div>
+
+        <div class="lesson-card">
+            <div class="lesson-info">
+                <h2>CSS Fundamentals</h2>
+                <span class="status pending" id="status-css">Status: Not Started</span>
+                <p>Learn how to style and design your pages.</p>
+            </div>
+            <button onclick="window.location.href='CSS Lesson 5.html'">Start Lesson</button>
+        </div>
+
+        <div class="lesson-card">
+            <div class="lesson-info">
+                <h2>Java Fundamentals</h2>
+                <span class="status pending" id="status-java">Status: Not Started</span>
+                <p>Learn object-oriented backend programming.</p>
+            </div>
+            <button onclick="window.location.href='Java Lesson 5.html'">Start Lesson</button>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Log Out</button>
+    </div>
+
+    <script>
+        // Load user data dynamically
+        const username = localStorage.getItem("username") || "Guest";
+        document.getElementById("greeting").innerText = `Welcome back, ${username}!`;
+
+        // Check platform progress automatically
+        if (localStorage.getItem("completed_html") === "true") {
+            const el = document.getElementById("status-html");
+            el.innerText = "Status: Completed";
+            el.className = "status completed";
+        }
+        if (localStorage.getItem("completed_css") === "true") {
+            const el = document.getElementById("status-css");
+            el.innerText = "Status: Completed";
+            el.className = "status completed";
+        }
+        if (localStorage.getItem("completed_java") === "true") {
+            const el = document.getElementById("status-java");
+            el.innerText = "Status: Completed";
+            el.className = "status completed";
+        }
+
+        function logout() {
+            localStorage.removeItem("username");
+            // Do not wipe global logic progress, just session info
+            window.location.href = "Homepage 5.html";
+        }
+    </script>
+</body>
+
+</html>
